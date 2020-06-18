@@ -8,7 +8,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-          <ComponentTest/>
+          <ComponentTest 
+            name={"plugbox-ui"}
+        />
         <span
           className="App-link"
         >
