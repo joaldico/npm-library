@@ -1,22 +1,14 @@
-import React from "react";
-import logo from "./logo.png";
-import "./App.css";
-import {
-	Button,
-	Notification,
-	Paragraph,
-	Link,
-	Checkbox,
-	Input,
-	Select
-} from "plugbox-ui";
+import React from 'react';
+import logo from './logo.png';
+import './App.css';
+import { Button, Notification, Paragraph, Link, Checkbox, Input, Select } from 'plugbox-ui';
 
 class App extends React.Component {
 	state = {
 		open: false,
 		checked: true,
-    input: "BUCARES",
-    select: ""
+		input: 'BUCARES',
+		select: '',
 	};
 
 	handleClick = () => {
@@ -30,13 +22,13 @@ class App extends React.Component {
 	handleClickCheckbox = () => {
 		this.setState(prevstate => ({ checked: !prevstate.checked }));
 	};
-  
+
 	handleClickInput = item => {
 		const { value } = item.target;
 		this.setState({ input: value });
-  };
-  
-  handleClickSelect = item => {
+	};
+
+	handleClickSelect = item => {
 		const { value } = item.target;
 		this.setState({ select: value });
 	};
@@ -57,22 +49,22 @@ class App extends React.Component {
 					<h1>Component: Button</h1>
 					<div className="Container-buttons">
 						<Button
-							text={"Click here to go to: plugbox-ui LIBRARY"}
-							size={"small"}
+							text={'Click here to go to: plugbox-ui LIBRARY'}
+							size={'small'}
 							disabled={false}
 							onClick={() => {
-								console.log("go to: plugbox-ui LIBRARY");
+								console.log('go to: plugbox-ui LIBRARY');
 							}}
-							variant={"red"}
+							variant={'red'}
 						/>
 					</div>
 					<div className="Container-buttons">
 						<Button
-							text={"Click here to go to: plugbox-ui LIBRARY"}
-							size={"large"}
+							text={'Click here to go to: plugbox-ui LIBRARY'}
+							size={'large'}
 							disabled={true}
 							onClick={() => {
-								console.log("go to: plugbox-ui LIBRARY");
+								console.log('go to: plugbox-ui LIBRARY');
 							}}
 						/>
 					</div>
@@ -80,17 +72,17 @@ class App extends React.Component {
 				<div className="Container-buttons Container">
 					<h1>Component: Notification</h1>
 					<Button
-						text={"Click here to see the notification"}
-						size={"small"}
+						text={'Click here to see the notification'}
+						size={'small'}
 						disabled={false}
 						onClick={this.handleClick}
 					/>
 					<Notification
-						type={"info"}
-						message={"This is a info message!"}
+						type={'info'}
+						message={'This is a info message!'}
 						open={this.state.open}
 						handleClose={this.handleClose}
-						anchor={{ vertical: "bottom", horizontal: "right" }}
+						anchor={{ vertical: 'bottom', horizontal: 'right' }}
 						hideDuration={600}
 					/>
 				</div>
@@ -99,12 +91,12 @@ class App extends React.Component {
 					<div className="Container-buttons">
 						<Paragraph
 							text={
-								"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed eiusmod tempor incidunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquid ex ea commodi consequat. Quis aute iure reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint obcaecat cupiditat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'
 							}
-							align={"center"}
-							color={"default"}
-							variant={"h6"}
-							textFormat={"underlined"}
+							align={'center'}
+							color={'default'}
+							variant={'h6'}
+							textFormat={'underlined'}
 							noWrap={false}
 						/>
 					</div>
@@ -112,11 +104,11 @@ class App extends React.Component {
 				<div className="Container-buttons Container">
 					<h1>Component: Link</h1>
 					<Link
-						text={"This is a link"}
-						color={"secondary"}
-						underline={"always"}
-						variant={"h4"}
-						href={"#"}
+						text={'This is a link'}
+						color={'secondary'}
+						underline={'always'}
+						variant={'h4'}
+						href={'#'}
 						onClick={() => {
 							alert("I'm a button.");
 						}}
@@ -129,9 +121,9 @@ class App extends React.Component {
 							checked={this.state.checked}
 							onChange={this.handleClickCheckbox}
 							disabled={false}
-							label={"This is a checkbox"}
-							color={"green"}
-							labelPlacement={"end"}
+							label={'This is a checkbox'}
+							color={'green'}
+							labelPlacement={'end'}
 						/>
 					</div>
 				</div>
@@ -139,12 +131,12 @@ class App extends React.Component {
 					<h1>Component: Input</h1>
 					<div className="Container-buttons">
 						<Input
-							label={"This is a input"}
+							label={'This is a input'}
 							value={this.state.input}
 							onChange={this.handleClickInput}
-							color={"amber"}
-              endAdornment={"$"}
-              required={true}
+							color={'amber'}
+							endAdornment={'$'}
+							required={true}
 						/>
 					</div>
 				</div>
@@ -152,13 +144,13 @@ class App extends React.Component {
 					<h1>Component: Select</h1>
 					<div className="Container-buttons">
 						<Select
-							id={"id"}
-							name={"select"}
-							label={"This is a select!"}
-              required={true}
-              color={"red"}
-              value={this.state.select}
-              onChange={this.handleClickSelect}
+							id={'id'}
+							name={'select'}
+							label={'This is a select!'}
+							required={true}
+							color={'red'}
+							value={this.state.select}
+							onChange={this.handleClickSelect}
 						>
 							<option value="">Select an element</option>
 							<option value={10}>Ten</option>
