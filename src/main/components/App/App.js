@@ -1,7 +1,7 @@
 import React from 'react';
 import logo from './logo.png';
 import './App.css';
-import { Button, Notification, Paragraph, Link, Checkbox, Input, Select } from 'plugbox-ui';
+import { Button, Notification, Paragraph, Link, Checkbox, Input, Select } from '@plugbox/plugbox-ui';
 
 class App extends React.Component {
 	state = {
